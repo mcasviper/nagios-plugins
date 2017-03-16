@@ -29,7 +29,7 @@ while (<>) {
 		$filelist =~ s/\s+/ /g;
 		$filelist .= " ";
 	}
-	if (/^Inst ([^\s]+).*security.*\)$/) {
+	if (/^Inst ([^\s]+).*[Ss]ecurity.*\)$/) {
 		$critical++;
 		$filelist =~ s/ ($1) / $1\[S\] /g;
 	}
